@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div#b {
+	height: 1000px;
+}
+div#a {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    text-align: center;
+    overflow-y: scroll;
+	margin-left: 100px;
+margin-top:100px;
+	
+}
+
+body{
+margin:0; 	
+}
+</style>
+</head>
+<body>
+
+<div> sdfdsfs dsf
+sxd
+far-leftsf
+dsafd
+ sf
+ sfdsa
+ fdsa
+ far-leftsaf
+ s
+ <div id="b">TTTTTTTTTTTTTTT</div>
+	<div id="a" onclick="showCoords(event)"><p id="demo">
+	</p></div><p id="demo"></p>
+</div>
+<p><strong>Tip:</strong> Try to click different places in the div.</p>
+
+<script>
+function showCoords(event) {
+    var oX = event.offsetX;
+    var sX = event.screenX;
+    var oY = event.offsetY;
+    var sY = event.screenY;
+    var pX = event.pageX;
+    var pY = event.pageY;
+	var cX = event.clientX;
+    var cY = event.clientY;
+    var coords1 = "offset - X: " + oX + ", Y coords: " + oY;
+    var coords2 = "screen - X: " + sX + ", Y coords: " + sY;
+    var coords3 = "page - X: " + pX + ", Y coords: " + pY;
+	var coords4 = "client - X: " + cX + ", Y coords: " + cY;
+	for (var i = 0; i < 50; i++) {
+		document.getElementById("demo").innerHTML = coords1 + "<br>" + coords2 + "<br>" + coords3 + "<br>" + coords4;
+	}
+}
+</script>
+
+</body>
+</html>
